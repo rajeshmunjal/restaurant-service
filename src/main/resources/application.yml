@@ -13,4 +13,4 @@ spec:
       password: VEER2019
       database: restaurant_db
       port: 27017
-      host: mongodb-persistent-9c247-credentials-aln1h
+      host: mongodb-persistent-rxprm-credentials-4bjp7
