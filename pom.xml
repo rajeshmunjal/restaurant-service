@@ -2,49 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<groupId>restaurant-service</groupId>
-	<artifactId>restaurant-service</artifactId>
-	<version>1.0</version>
-
-	<packaging>war</packaging>
-
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.3.3.RELEASE</version>
-	</parent>
+    <parent>
+        <artifactId>food-ordering-system</artifactId>
+        <groupId>com.ibm</groupId>
+        <version>1.0.0.BUILD-SNAPSHOT</version>
+    </parent>
 
     <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>restaurant-service</artifactId>
+
     <name>restaurant-service</name>
     <description>Restaurant service</description>
-   <properties>
-          <!-- JBoss dependency versions -->
-        
-        <version.jboss.maven.plugin>7.4.Final</version.jboss.maven.plugin>
-        
-        <!-- Define the version of the JBoss BOMs we want to import to specify tested stacks. -->
-        <version.jboss.bom.eap>6.4.0.GA</version.jboss.bom.eap>
-
-        <!-- other plugin versions -->
-        <version.war.plugin>2.1.1</version.war.plugin>
-        <version.surefire.plugin>2.10</version.surefire.plugin>
-
-        <!-- maven-compiler-plugin -->
-        <maven.compiler.target>1.6</maven.compiler.target>
-        <maven.compiler.source>1.6</maven.compiler.source>
-    </properties>
-    <dependencyManagement>
-        <dependencies>
-			<!-- https://mvnrepository.com/artifact/org.jboss.bom.eap/jboss-javaee-6.0-with-tools -->
-			<dependency>
-			    <groupId>org.jboss.bom.eap</groupId>
-			    <artifactId>jboss-javaee-6.0-with-tools</artifactId>
-			    <version>6.2.0-redhat-1</version>
-			    <type>pom</type>
-			</dependency>
-        </dependencies>
-    </dependencyManagement>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -53,27 +22,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        <exclusions>
-            <exclusion>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-tomcat</artifactId>
-            </exclusion>
-        </exclusions>
         </dependency>
-<dependency>
-    <groupId>javax.enterprise</groupId>
-    <artifactId>cdi-api</artifactId>
-    <version>2.0</version>
-    <scope>provided</scope>
-</dependency>
-
-
-	<dependency>
-	    <groupId>org.jboss.spec.javax.servlet</groupId>
-	    <artifactId>jboss-servlet-api_3.1_spec</artifactId>
-	    <version>1.0.2.Final</version>
-	    <scope>provided</scope>
-	</dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
@@ -89,7 +38,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.10</version>
+
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -105,22 +54,10 @@
     </dependencies>
 
     <build>
-        <!-- Set the name of the war, used as the context root when the app 
-            is deployed -->
-        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>${version.war.plugin}</version>
-                <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                </configuration>
-            </plugin>
-            <!-- JBoss AS plugin to deploy war -->
-            <plugin>
-                <groupId>org.jboss.as.plugins</groupId>
-                <artifactId>jboss-as-maven-plugin</artifactId>
-                <version>${version.jboss.maven.plugin}</version>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
