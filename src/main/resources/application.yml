@@ -1,0 +1,14 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: restaurant-service
+spec:
+  selector:
+    app: restaurant-service   
+  data:
+    mongodb:
+      authentication-database: admin
+      database: restaurant_db
+      port: 27017
+      host: localhost
