@@ -15,9 +15,6 @@
 	</parent>
 
     <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>restaurant-service</artifactId>
-
     <name>restaurant-service</name>
     <description>Restaurant service</description>
 
