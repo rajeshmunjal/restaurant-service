@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8080
 spring:
   application:
     name: restaurant-service
@@ -9,6 +9,8 @@ spec:
   data:
     mongodb:
       authentication-database: admin
+      username: monogoDB
+      password: VEER2019
       database: restaurant_db
       port: 27017
-      host: localhost
+      host: mongodb-persistent-9c247-credentials-aln1h
