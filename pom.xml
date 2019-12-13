@@ -34,6 +34,11 @@
         </exclusions>
         </dependency>
         <dependency>
+            <artifactId>javax.servlet</artifactId>
+            <groupId>javax.servlet-api</groupId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
