@@ -5,10 +5,4 @@ spring:
     name: restaurant-service
 spec:
   selector:
-    app: restaurant-service   
-  data:
-    mongodb:
-      authentication-database: admin
-      database: restaurant_db
-      port: 27017
-      host: localhost
+    app: restaurant-service
